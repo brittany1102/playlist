@@ -1,1 +1,4 @@
-
+body{
+    background: linear-gradient(#ffccff,#ff99cc,#ff66cc);
+    background-size:auto;
+}

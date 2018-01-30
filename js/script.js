@@ -50,9 +50,18 @@ var myPlayList = [
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
   
+	var mySong = {
+		title: "Tenerife Sea",
+		artist: "Ed Sheeran",
+		runTime: "4 minutes",
+	};
 
-
-
+$("#list").append(
+	"<div type='div' class='btn btn-secondary' data-toggle='tooltip' data-placement='top' title='"+ mySong.runTime + "'>" +
+	"<p>Title2: " + mySong.title+ "</p>" +
+	"<p>Artist: " + mySong.artist+ "</p>" +
+	"</div>");
+// $("div").append("<p>Artist: " + mySong.artist+ "</p>");
 });
 
 function displayList(){
