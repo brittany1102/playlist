@@ -76,15 +76,17 @@ function addSong(){
 		title: $("#title").val(),
 		artist: $("#artist").val(),
 		album: $("#album").val(),
+		runTime: $("#length").val(),
 	};
   return song;
 }
 
 function addToList(song){
 	$("#list").append(
-	"<div type='div' class='btn btn-secondary' data-toggle='tooltip' data-placement='top' title='"+ song.runTime + "'>" +
+	"<div type='div' class='btn btn-secondary' data-toggle='tooltip' data-placement='top' title='"+ song.runTime + " minutes" + "'>" +
 	"<p>Title: " + song.title+ "</p>" +
 	"<p>Artist: " + song.artist+ "</p>" +
+	"<p>Artist: " + song.album+ "</p>" +
 	"</div>");
 	
 }
