@@ -49,18 +49,12 @@ var myPlayList = [
 
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
-  
-	var mySong = {
-		title: "Tenerife Sea",
-		artist: "Ed Sheeran",
-		runTime: "4 minutes",
-	};
+	$("#addSong").click(function(){
+		var song = addSong();
+		addToList(song);
+		console.log("Hello")
+	});
 
-$("#list").append(
-	"<div type='div' class='btn btn-secondary' data-toggle='tooltip' data-placement='top' title='"+ mySong.runTime + "'>" +
-	"<p>Title2: " + mySong.title+ "</p>" +
-	"<p>Artist: " + mySong.artist+ "</p>" +
-	"</div>");
 // $("div").append("<p>Artist: " + mySong.artist+ "</p>");
 });
 
@@ -76,8 +70,21 @@ function clearList(){
   
 }
 
+
 function addSong(){
- 
-  
-  
+	var song = {
+		title: $("#title").val(),
+		artist: $("#artist").val(),
+		album: $("#album").val(),
+	};
+  return song;
+}
+
+function addToList(song){
+	$("#list").append(
+	"<div type='div' class='btn btn-secondary' data-toggle='tooltip' data-placement='top' title='"+ song.runTime + "'>" +
+	"<p>Title: " + song.title+ "</p>" +
+	"<p>Artist: " + song.artist+ "</p>" +
+	"</div>");
+	
 }
