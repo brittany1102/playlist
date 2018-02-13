@@ -82,11 +82,14 @@ function addSong(){
 }
 
 function addToList(song){
-	$("#list").append(
+	$(".songs").append(
+	"<div class='song'>" +
 	"<div type='div' class='btn btn-secondary' data-toggle='tooltip' data-placement='top' title='"+ song.runTime + " minutes" + "'>" +
 	"<p>Title: " + song.title+ "</p>" +
 	"<p>Artist: " + song.artist+ "</p>" +
-	"<p>Artist: " + song.album+ "</p>" +
-	"</div>");
+	"<p>Album: " + song.album+ "</p>" +
+	"</div>" +
+	"</div>"
+	);
 	
 }
